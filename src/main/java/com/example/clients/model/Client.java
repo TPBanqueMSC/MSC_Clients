@@ -5,8 +5,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Client {
 
     @Id
@@ -14,19 +20,6 @@ public class Client {
     private Long id;
     private String name;
     private String email;
-    // Autres attributs...
-
-    // Constructeurs, getters, setters, etc.
-
-    public Client() {
-    }
-
-    public Client(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
-
-    // Getters et setters pour id, name, email, etc.
 
     public Long getId() {
         return id;
